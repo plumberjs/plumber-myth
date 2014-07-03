@@ -41,6 +41,8 @@ module.exports = function(/* no options */) {
                 sourceMap = SourceMap.fromMapObject(inlineSourceMap);
             }
 
+            // TODO: remap any input source map
+
             var convertedCss = stripSourceMappingComment(convertedCssAndMap);
 
             return resource.withData(convertedCss, sourceMap);
